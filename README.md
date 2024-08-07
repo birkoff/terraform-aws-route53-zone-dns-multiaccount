@@ -46,7 +46,7 @@ EOF
 }
 
 terraform {
-  source = "birkoff/route53-zone-dns-multiaccount/aws"
+  source = "git::https://github.com/birkoff/terraform-aws-route53-zone-dns-multiaccount.git/"
 }
 
 inputs = {
