@@ -47,15 +47,15 @@ module "ssm_params" {
   source = "birkoff/ssm-params/aws"
   parameters = {
     acm_certificate_arn = {
-      name  = "/${var.application}/${var.service}/acm_certificate_arn"
+      name  = "/${var.service}/acm_certificate_arn"
       value = module.acm.acm_certificate_arn
     }
     hosted_zone_id = {
-      name  = "/${var.application}/${var.service}/hosted_zone_id"
+      name  = "/${var.service}/hosted_zone_id"
       value = module.zone.route53_zone_zone_id[var.hosted_zone_name]
     }
     hosted_zone_name = {
-      name  = "/${var.application}/${var.service}/hosted_zone_name"
+      name  = "/${var.service}/hosted_zone_name"
       value = module.zone.route53_zone_name[var.hosted_zone_name]
     }
   }

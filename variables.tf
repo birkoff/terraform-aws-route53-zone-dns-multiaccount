@@ -3,9 +3,6 @@ variable "subject_alternative_names" {
   type = list(string)
 }
 
-variable "application" {
-  type = string
-}
 variable "main_hosted_zone_name" {
     type = string
 }
